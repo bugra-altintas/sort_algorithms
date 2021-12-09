@@ -5,7 +5,6 @@
     ascending : true for ascending, false for descending 
     n         : number of elements in the array
     l         : the number of characters used in counting sort at each time
-    
 */
 
 int twosix(std::string str,int pos, int l){

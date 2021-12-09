@@ -1,4 +1,3 @@
-
 void swap(unsigned short* p, unsigned short* q){
     if(p != q){
         int temp = *p;
