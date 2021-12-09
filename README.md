@@ -1,5 +1,5 @@
 # Sorts
--Silly Sort
+- Silly Sort
 This sorting algorithm divides the given array **arr** into quarters and sorts by making 6 recursive calls. The function **sillySort** returns the total number of calls. Also, it counts the number of **comparison**s and **swap**s executed.
 
 - Cross Merge Sort
