@@ -7,7 +7,7 @@
     l         : the number of characters used in counting sort at each time
 */
 
-int twosix(std::string str,int pos, int l){
+int str_to_26(std::string str,int pos, int l){
     int sum = 0;
     for(int i = 0; i<l;i++){
         sum+=pow(26,l-i-1)*(str.substr(pos,l)[i]-65);
@@ -20,7 +20,7 @@ void countingSort(int& iterations, std::string A[], int size, int l, int pos, bo
     int* C = new int[k];
     std::string B[size];
     for(int j = 0; j<size;j++){//LOOP 1
-        C[twosix(A[j],pos,l)]++;
+        C[str_to_26(A[j],pos,l)]++;
         iterations++;
     }
     for(int i = 1;i<k;i++){//LOOP 2
@@ -29,15 +29,15 @@ void countingSort(int& iterations, std::string A[], int size, int l, int pos, bo
     }
     if(ascending){
         for(int j = size-1; j>=0;j--){//LOOP 3-ascending
-            B[C[twosix(A[j],pos,l)] - 1] = A[j];
-            C[twosix(A[j],pos,l)]--;
+            B[C[str_to_26(A[j],pos,l)] - 1] = A[j];
+            C[str_to_26(A[j],pos,l)]--;
             iterations++;
         }
     }
     else{
         for(int j = 0; j<size;j++){//LOOP 3-descending
-            B[size - C[twosix(A[j],pos,l)]] = A[j];
-            C[twosix(A[j],pos,l)]--;
+            B[size - C[str_to_26(A[j],pos,l)]] = A[j];
+            C[str_to_26(A[j],pos,l)]--;
             iterations++;
         }
     }

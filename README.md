@@ -10,3 +10,6 @@ This sorting algorithm divides the given array **arr** into quarters and sorts b
 
 - 3-way Quick Sort
 In 3-way QuickSort, an array arr[l..r] is divided into three parts in partition process. **quickSort3()** function sorts the array in descending order, counts the number of **swap**s executed during sorting process and counts the number of **comparison**s executed during sorting proccess. 
+
+- Radix Sort
+In this **Radix Sort** algorithm, **radixSort()** function sorts given array **std::string arr** in ascending or descending depending on the variable **ascending** by using *Counting Sort* algorithm as a subroutine. It treats to strings as a number in base 26 by using **str_to_26()** helper function. **radixSort()** function returns the number of **iterations** done in the loops of the *Counting Sort* algorithm.
