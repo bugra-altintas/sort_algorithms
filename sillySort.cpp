@@ -21,8 +21,10 @@ int sillySort(int* arr, long &comparison, long & swaps, int size)
 	    int* q2 = arr + (size/2 - 1);
 	    int* q3 = arr + (3*size/4 - 1);
 	    //recursion calls
-	    return num_of_calls + sillySort(arr, comparison, swaps, size/2) + sillySort(q1+1, comparison, swaps, size/2) + sillySort(q2+1, comparison, swaps, size/2)
-	            + sillySort(arr, comparison, swaps, size/2) + sillySort(q1+1, comparison, swaps, size/2) + sillySort(arr, comparison, swaps, size/2);
+	    return num_of_calls + sillySort(arr, comparison, swaps, size/2) + 
+				sillySort(q1+1, comparison, swaps, size/2) + sillySort(q2+1, comparison, swaps, size/2) + 
+				sillySort(arr, comparison, swaps, size/2) + sillySort(q1+1, comparison, swaps, size/2) + 
+				sillySort(arr, comparison, swaps, size/2);
 	}
 	
 	return num_of_calls;

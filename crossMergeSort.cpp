@@ -5,6 +5,7 @@ void swap(int* p, int* q){
     *q = temp;
 }
 
+//merge function
 void merge(int *arr, int* sub1, int* sub2,int size, long &comparison){
     int i = 0;
     int i1 = 0;

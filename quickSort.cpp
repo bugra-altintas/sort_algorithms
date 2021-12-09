@@ -7,7 +7,7 @@ void swap(unsigned short* p, unsigned short* q){
         *q = temp;
     }
 }
-
+//returns the pivot index
 int classical_partition(unsigned short* arr, long &swaps, double & avg_dist, double & max_dist, int size){
     int pivot = size-1;
     int i = -1;
@@ -28,8 +28,9 @@ int classical_partition(unsigned short* arr, long &swaps, double & avg_dist, dou
     max_dist = pivot-(i+1) > max_dist ? pivot-(i+1) : max_dist;
     avg_dist = swaps ? (local_sum_dist + sum_dist)/swaps : 0;
     return i+1;
-} //returns the pivot index
+} 
 
+//returns the pivot index
 int hoare_partition(unsigned short* arr, long &swaps, double & avg_dist, double & max_dist, int size){
     int pivot = arr[(size-1)/2];
     int i = -1;
@@ -58,11 +59,8 @@ int hoare_partition(unsigned short* arr, long &swaps, double & avg_dist, double 
             return j;
         }
     }
-    
-    
-    
     return 0;
-} //returns the pivot index
+} 
 
 void quickSort(unsigned short* arr, long &swaps, double & avg_dist, double & max_dist, bool hoare, int size)
 {
